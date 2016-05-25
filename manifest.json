@@ -1,0 +1,17 @@
+{
+  "name": "Ta3atiq",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Makes Arabic pages use Hebrew Letters",
+  "browser_action" : {
+    "default_icon": "ta3atic-48.png",
+    "default_title": "Ta3atiq properties",
+    "default_popup": "popup.html"     
+    },  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["contentscript.js"]
+    }
+  ]
+}
