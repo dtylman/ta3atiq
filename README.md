@@ -9,3 +9,4 @@ This is how Algazeera looks like:
 ![Algazeera Sample](ta3atic.png)
 
 ## Installation
+See here: https://github.com/dtylman/ta3atiq/wiki/Installation
