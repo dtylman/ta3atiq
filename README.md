@@ -10,3 +10,6 @@ This is how Algazeera looks like:
 
 ## Installation
 See here: https://github.com/dtylman/ta3atiq/wiki/Installation
+
+
+## Rules

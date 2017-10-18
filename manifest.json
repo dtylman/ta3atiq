@@ -1,17 +1,33 @@
 {
   "name": "Ta3atiq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Makes Arabic pages use Hebrew Letters",
-  "browser_action" : {
+  "page_action": {
+    "browser_style": true,
     "default_icon": "ta3atic-48.png",
-    "default_title": "Ta3atiq properties",
-    "default_popup": "popup.html"     
-    },  
+    "default_title": "Toggle trascription"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js" : ["contentscript.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "transcribe.js"
+      ]
     }
   ]
 }
