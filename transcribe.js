@@ -1,6 +1,5 @@
 function he2ar() {
     let table = {};
-    table["dir"] = "rtl";
     table[0x05D0] = 0x0627; //HEBREW LETTER ALEF
     table[0x05D1] = 0x0628; //HEBREW LETTER BET
     table[0x05D2] = 0x062C; //HEBREW LETTER GIMEL
@@ -33,8 +32,6 @@ function he2ar() {
 
 function ar2he() {
     let table = {};
-    table["dir"] = "rtl";
-
     table[0x0621] = 0x05D0; //ARABIC LETTER HAMZA --> Alef
     table[0x0622] = 0x05D0; //ARABIC LETTER ALEF WITH MADDA ABOVE --> Alef
     table[0x0623] = 0x05D0; //ARABIC LETTER ALEF WITH HAMZA ABOVE -->Alef
@@ -100,7 +97,6 @@ function ar2he() {
 
 function ar2chat() {
     let table = {};
-    table["dir"] = "ltr";
     table[0x0621] = 97; //ARABIC LETTER HAMZA --> a
     table[0x0622] = 97; //ARABIC LETTER ALEF WITH MADDA ABOVE --> a
     table[0x0623] = 97; //ARABIC LETTER ALEF WITH HAMZA ABOVE --> a`
@@ -188,7 +184,6 @@ function transcribeText(text) {
 
 var textTable = [];
 var textObjects = [];
-var direction = document.body.dir;
 var transcribed = false;
 
 function toggleTranscription(m) {
@@ -200,8 +195,7 @@ function toggleTranscription(m) {
         textTable = ar2he();
     }
 
-    if (!transcribed) {
-        document.body.dir = textTable["dir"];
+    if (!transcribed) {      
         for (let i in textObjects) {
             textObjects[i].node.textContent = transcribeText(textObjects[i].node.textContent);
         }
@@ -210,7 +204,6 @@ function toggleTranscription(m) {
         for (let i in textObjects) {
             textObjects[i].node.textContent = textObjects[i].text;
         }
-        document.body.dir = direction;
         transcribed = false;
     }
 }
