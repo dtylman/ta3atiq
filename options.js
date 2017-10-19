@@ -1,22 +1,24 @@
 function saveOptions(e) {
+    let conf = { lang: document.getElementById("lang").value };
+    browser.storage.local.set(conf);
     e.preventDefault();
-    browser.storage.local.set({
-   //     color: document.querySelector("#color").value
-    });
+}
+
+async function loadOptions() {
+    try {
+        let lang = await browser.storage.local.get("lang");
+        if (!lang.lang){        
+            document.getElementById("lang").value = "ar2heb";
+        } else {
+            document.getElementById("lang").value = lang.lang;
+        }
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 function restoreOptions() {
-
-    function setCurrentChoice(result) {
-        //document.querySelector("#color").value = result.color || "blue";
-    }
-
-    function onError(error) {
-        console.log(`Error: ${error}`);
-    }
-
-   // var getting = browser.storage.local.get("color");
-   // getting.then(setCurrentChoice, onError);
+    loadOptions();
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);

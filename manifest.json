@@ -2,7 +2,7 @@
   "name": "Ta3atiq",
   "version": "1.0.1",
   "manifest_version": 2,
-  "description": "Makes Arabic pages use Hebrew Letters",
+  "description": "Transcribe Web Pages",
   "page_action": {
     "browser_style": true,
     "default_icon": "ta3atic-48.png",

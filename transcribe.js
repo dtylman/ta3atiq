@@ -1,43 +1,40 @@
 function he2ar() {
     let table = {};
     table["dir"] = "rtl";
-    table[0x05D0] = 0; //HEBREW LETTER ALEF
-    table[0x05D1] = 0; //HEBREW LETTER BET
-    table[0x05D2] = 0; //HEBREW LETTER GIMEL
-    table[0x05D3] = 0; //HEBREW LETTER DALET
-    table[0x05D4] = 0; //HEBREW LETTER HE
-    table[0x05D5] = 0; //HEBREW LETTER VAV
-    table[0x05D6] = 0; //HEBREW LETTER ZAYIN
-    table[0x05D7] = 0; //HEBREW LETTER HET
-    table[0x05D8] = 0; //HEBREW LETTER TET
-    table[0x05D9] = 0; //HEBREW LETTER YOD
-    table[0x05DA] = 0; //HEBREW LETTER FINAL KAF
-    table[0x05DB] = 0; //HEBREW LETTER KAF
-    table[0x05DC] = 0; //HEBREW LETTER LAMED
-    table[0x05DD] = 0; //HEBREW LETTER FINAL MEM
-    table[0x05DE] = 0; //HEBREW LETTER MEM
-    table[0x05DF] = 0; //HEBREW LETTER FINAL NUN
-    table[0x05E0] = 0; //HEBREW LETTER NUN
-    table[0x05E1] = 0; //HEBREW LETTER SAMEKH
-    table[0x05E2] = 0; //HEBREW LETTER AYIN
-    table[0x05E3] = 0; //HEBREW LETTER FINAL PE
-    table[0x05E4] = 0; //HEBREW LETTER PE
-    table[0x05E5] = 0; //HEBREW LETTER FINAL TSADI
-    table[0x05E6] = 0; //HEBREW LETTER TSADI
-    table[0x05E7] = 0; //HEBREW LETTER QOF
-    table[0x05E8] = 0; //HEBREW LETTER RESH
-    table[0x05E9] = 0; //HEBREW LETTER SHIN
-    table[0x05EA] = 0; //HEBREW LETTER TAV
-    table[0x05F0] = 0; //HEBREW LIGATURE YIDDISH DOUBLE VAV
-    table[0x05F1] = 0; //HEBREW LIGATURE YIDDISH VAV YOD
-    table[0x05F2] = 0; //HEBREW LIGATURE YIDDISH DOUBLE YOD
-    table[0x05F3] = 0; //HEBREW PUNCTUATION GERESH
-    table[0x05F4] = 0; //HEBREW PUNCTUATION GERSHAYIM
+    table[0x05D0] = 0x0627; //HEBREW LETTER ALEF
+    table[0x05D1] = 0x0628; //HEBREW LETTER BET
+    table[0x05D2] = 0x062C; //HEBREW LETTER GIMEL
+    table[0x05D3] = 0x062F; //HEBREW LETTER DALET
+    table[0x05D4] = 0x0647; //HEBREW LETTER HE
+    table[0x05D5] = 0x0648; //HEBREW LETTER VAV
+    table[0x05D6] = 0x0632; //HEBREW LETTER ZAYIN
+    table[0x05D7] = 0x062D; //HEBREW LETTER HET
+    table[0x05D8] = 0x0637; //HEBREW LETTER TET
+    table[0x05D9] = 0x064A; //HEBREW LETTER YOD
+    table[0x05DA] = 0x0643; //HEBREW LETTER FINAL KAF
+    table[0x05DB] = 0x0643; //HEBREW LETTER KAF
+    table[0x05DC] = 0x0644; //HEBREW LETTER LAMED
+    table[0x05DD] = 0x0645; //HEBREW LETTER FINAL MEM
+    table[0x05DE] = 0x0645; //HEBREW LETTER MEM
+    table[0x05DF] = 0x0646; //HEBREW LETTER FINAL NUN
+    table[0x05E0] = 0x0646; //HEBREW LETTER NUN
+    table[0x05E1] = 0x0633; //HEBREW LETTER SAMEKH
+    table[0x05E2] = 0x0639; //HEBREW LETTER AYIN
+    table[0x05E3] = 0x0641; //HEBREW LETTER FINAL PE
+    table[0x05E4] = 0x0641; //HEBREW LETTER PE
+    table[0x05E5] = 0x0635; //HEBREW LETTER FINAL TSADI
+    table[0x05E6] = 0x0635; //HEBREW LETTER TSADI
+    table[0x05E7] = 0x0642; //HEBREW LETTER QOF
+    table[0x05E8] = 0x0631; //HEBREW LETTER RESH
+    table[0x05E9] = 0x0634; //HEBREW LETTER SHIN
+    table[0x05EA] = 0x062A; //HEBREW LETTER TAV
     return table;
 }
 
 function ar2he() {
     let table = {};
+    table["dir"] = "rtl";
+
     table[0x0621] = 0x05D0; //ARABIC LETTER HAMZA --> Alef
     table[0x0622] = 0x05D0; //ARABIC LETTER ALEF WITH MADDA ABOVE --> Alef
     table[0x0623] = 0x05D0; //ARABIC LETTER ALEF WITH HAMZA ABOVE -->Alef
@@ -104,12 +101,12 @@ function ar2he() {
 function ar2chat() {
     let table = {};
     table["dir"] = "ltr";
-    table[0x0621] = 50; //ARABIC LETTER HAMZA --> 2
-    table[0x0622] = 50; //ARABIC LETTER ALEF WITH MADDA ABOVE --> 2
-    table[0x0623] = 50; //ARABIC LETTER ALEF WITH HAMZA ABOVE --> 2
+    table[0x0621] = 97; //ARABIC LETTER HAMZA --> a
+    table[0x0622] = 97; //ARABIC LETTER ALEF WITH MADDA ABOVE --> a
+    table[0x0623] = 97; //ARABIC LETTER ALEF WITH HAMZA ABOVE --> a`
     table[0x0624] = 50; //ARABIC LETTER WAW WITH HAMZA ABOVE  --> 2
-    table[0x0625] = 50; //ARABIC LETTER ALEF WITH HAMZA BELOW -->2
-    table[0x0626] = 50; //ARABIC LETTER YEH WITH HAMZA ABOVE -->ALEF
+    table[0x0625] = 97; //ARABIC LETTER ALEF WITH HAMZA BELOW -->a
+    table[0x0626] = 97; //ARABIC LETTER YEH WITH HAMZA ABOVE -->a
     table[0x0627] = 97; //ARABIC LETTER ALEF --> a
     table[0x0628] = 98; //ARABIC LETTER BEH --> b
     table[0x0629] = [97, 104]; //ARABIC LETTER TEH MARBUTA --> ah
@@ -166,8 +163,6 @@ function ar2chat() {
     return table;
 }
 
-var textTable = ar2chat();
-
 function transcribeText(text) {
     let out = "";
     let j = 0;
@@ -191,11 +186,20 @@ function transcribeText(text) {
     return out;
 }
 
+var textTable = [];
 var textObjects = [];
 var direction = document.body.dir;
 var transcribed = false;
 
 function toggleTranscription(m) {
+    if (m.lang == "ar2chat") {
+        textTable = ar2chat();
+    } else if (m.lang == "heb2ar") {
+        textTable = he2ar();
+    } else {
+        textTable = ar2he();
+    }
+
     if (!transcribed) {
         document.body.dir = textTable["dir"];
         for (let i in textObjects) {
@@ -212,13 +216,21 @@ function toggleTranscription(m) {
 }
 
 
-let treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-while (treeWalker.nextNode()) {
-    textObjects.push({ node: treeWalker.currentNode, text: treeWalker.currentNode.textContent });
+async function init() {
+    try {        
+        let treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        while (treeWalker.nextNode()) {
+            textObjects.push({ node: treeWalker.currentNode, text: treeWalker.currentNode.textContent });
+        }
+
+        // this is called when page action is clicked
+        browser.runtime.onMessage.addListener(toggleTranscription);
+
+        //notify background script that we content script is done.
+        browser.runtime.sendMessage({});
+    } catch (e) {
+        console.log(e);
+    }
 }
 
-// this is called when page action is clicked
-browser.runtime.onMessage.addListener(toggleTranscription);
-
-//notify background script that we content script is done.
-browser.runtime.sendMessage({});
+init();

@@ -1,10 +1,11 @@
 async function pageActionClicked() {
-    try {
+    try {        
         let tab = await browser.tabs.query({ currentWindow: true, active: true });
         if (tab.length == 0) {
             return;
         }
-        browser.tabs.sendMessage(tab[0].id, {});
+        let lang = await browser.storage.local.get("lang");    
+        browser.tabs.sendMessage(tab[0].id, lang);
     }
     catch (e) {
         console.log(e);
@@ -21,7 +22,7 @@ async function showPageAction(tabid) {
 }
 
 function tabCreated(tab) {
-    showPageAction(tab.id);    
+    showPageAction(tab.id);
 }
 
 function contentScriptInitialized(request, sender, sendResponse) {
@@ -29,7 +30,7 @@ function contentScriptInitialized(request, sender, sendResponse) {
 }
 
 async function init() {
-    try {
+    try {        
         browser.pageAction.onClicked.addListener(pageActionClicked);
         browser.tabs.onCreated.addListener(tabCreated);
         browser.runtime.onMessage.addListener(contentScriptInitialized);
